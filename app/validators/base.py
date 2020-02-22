@@ -6,7 +6,7 @@ from app.libs.error_code import ParameterException
 
 class BaseForm(Form):
     def __init__(self):
-        data = request.get_json(slient=True)
+        data = request.get_json()
         args = request.args.to_dict()
         super(BaseForm, self).__init__(data=data, **args)
 
